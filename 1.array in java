@@ -1,0 +1,52 @@
+/*basic array,returning array,manipulating the array*/
+
+import java.util.*;
+
+
+public class Main{
+    
+    static void sum(int a[])
+    {
+        int s=0;
+        for(int i:a)
+        {
+            s=s+i;
+        }
+        System.out.println("sum: "+s);
+    }
+    static int[] dou(int a[])
+    {
+        int b[]=new int[5];
+        int j=0;
+        for(int i:a)
+        {
+            b[j]=i*2;
+            j++;
+        }
+        return b;
+    }
+    public static void main(String args[])
+    {
+        
+        Scanner obj=new Scanner(System.in);
+        System.out.println("enter name:");
+        String name=obj.nextLine();
+        int marks[]=new int[5];
+        System.out.println("enter marks");
+        for(int i=0;i<marks.length;i++)
+        {
+            System.out.println("enter sub:"+i+" marks");
+            marks[i]=obj.nextInt();
+        }
+        for(int i:marks)
+        {
+            System.out.println(i*10);
+        }
+        sum(marks);
+        int arr[]= dou(marks);
+        System.out.println("double the array");
+        for(int i:arr)
+        System.out.println(i);
+        
+    }
+}
